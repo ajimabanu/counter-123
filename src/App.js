@@ -6,6 +6,9 @@ function App() {
       setCount((count) => count + 2);
     }, [1000]);
   });
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((res) => res.json)
+    .then((res) => console.log(res.id));
   return (
     <div className="container">
       <div className="card text-center my-5">
